@@ -4,6 +4,8 @@ media_path = "./media"
 
 
 def user_folder_exists(user_id: int):
+	if not os.path.exists(f"{media_path}"):
+		os.mkdir(f"{media_path}")
 	return os.path.exists(f"{media_path}/{user_id}")
 
 
