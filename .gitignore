@@ -1,3 +1,4 @@
 .env
 tg_env
 bot/__pycache__*
+media/*

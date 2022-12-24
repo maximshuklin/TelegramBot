@@ -70,14 +70,14 @@ async def process_help_command(message: types.Message):
 async def process_add_category_command(message: types.Message):
 	user_id = message.from_user.id
 	set_state(user_id, State.ADD_CATEGORY)
-	await bot.send_message(user_id, "add_category")
+	await bot.send_message(user_id, "Напишите название категории, которую хотите добавить:")
 
 
 @dp.message_handler(commands=['del', 'delete_category'])
 async def process_delete_category_command(message: types.Message):
 	user_id = message.from_user.id
 	set_state(user_id, State.DELETE_CATEGORY)
-	await bot.send_message(user_id, "delete_category")
+	await bot.send_message(user_id, "Напишите название категории, которую хотите удалить:")
 
 
 @dp.message_handler(commands=['categories'])
