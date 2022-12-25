@@ -3,4 +3,10 @@ version: '3.7'
 services:
   bot:
     build: .
-    restart: always
+  bubunta:
+    container_name: ubuntu
+    image: ubuntu:latest
+    restart:
+      on-failure
+    command:
+      ["sleep", "infinity"]
